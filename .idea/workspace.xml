@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92643d16-e9b6-495a-a0ef-d279cca8b34f" name="Changes" comment="initial commit" />
+    <list default="true" id="92643d16-e9b6-495a-a0ef-d279cca8b34f" name="Changes" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/listings/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/listings/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/listings/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/listings/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,12 +52,14 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Language Defaults",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ryosu\PycharmProjects\djangoReact\frontend\src\Components" />
+      <recent name="C:\Users\ryosu\PycharmProjects\djangoReact\frontend\src" />
       <recent name="C:\Users\ryosu\PycharmProjects\djangoReact" />
       <recent name="C:\Users\ryosu\PycharmProjects\djangoReact\backend" />
     </key>
@@ -101,7 +113,12 @@
       <workItem from="1666597371853" duration="2640000" />
       <workItem from="1666880453139" duration="3000" />
       <workItem from="1667067120438" duration="3000" />
-      <workItem from="1667289400165" duration="1215000" />
+      <workItem from="1667289400165" duration="1320000" />
+      <workItem from="1667290743079" duration="355000" />
+      <workItem from="1667565610101" duration="3126000" />
+      <workItem from="1667573517220" duration="3780000" />
+      <workItem from="1667622437955" duration="373000" />
+      <workItem from="1667623345247" duration="23601000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1667289557860</created>
@@ -117,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667289594280</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initial commit">
+      <created>1667290703587</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667290703587</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
