@@ -1,12 +1,12 @@
-import React, {useState} from "react";
-
+import React, {useState, useEffect} from "react";
+import Axios from "axios";
 // React leaflet
 import {MapContainer, Marker, Popup, TileLayer} from 'react-leaflet'
 import {Icon} from 'leaflet'
 
 //MUI
 import Grid2 from "@mui/material/Unstable_Grid2";
-import {AppBar, Button, Card, CardContent, CardHeader, CardMedia, Typography} from "@mui/material";
+import {AppBar, Button, Card, CardContent, CardHeader, CardMedia, CircularProgress, Typography} from "@mui/material";
 
 //Map icons
 import houseIconPng from './Assets/Mapicons/house.png'
@@ -19,6 +19,13 @@ import myListings from "./Assets/Data/Dummydata";
 
 
 function Listings() {
+
+    // const url = 'http://127.0.0.1:8000/api/listings/'
+    // fetch(url)
+    //     .then(response => response.json())
+    //     .then(data => console.log(data))
+
+
     const houseIcon = new Icon({
         iconUrl: houseIconPng,
         iconSize: [40, 40],
@@ -35,10 +42,44 @@ function Listings() {
     const [latitude, setLatitude] = useState(51.487367667938344)
     const [longitude, setLongitude] = useState(-0.12633011870915023)
 
+    const [allListings, setAllListings] = useState([])
+    const [dataLoading, setDataLoading] = useState(true)
+
+    useEffect(() => {
+        const source = Axios.CancelToken.source();
+        async function GetAllListings() {
+            try {
+                const response = await Axios.get("http://127.0.0.1:8000/api/listings/", {cancelToken: source.token});
+                setAllListings(response.data)
+                setDataLoading(false)
+            } catch (error) {
+                console.log(error.response)
+            }
+        }
+        GetAllListings();
+        return ()=> {
+            source.cancel();
+        }
+    }, [])
+
+    if (dataLoading === false){
+            console.log(allListings[0].location);
+    }
+
+    if (dataLoading === true) {
+        return (
+            <Grid2 container justifyContent='center' alignItems='center' style={{height: '100vh'}}>
+                <CircularProgress />
+            </Grid2>
+
+        )
+    }
+
+
     return (
         <Grid2 container>
             <Grid2 item xs={4}>
-                {myListings.map((listing) => {
+                {allListings.map((listing) => {
                     return (
                         <Card key={listing.id}
                               style={{margin: '0.5rem', border: '1px solid black', position: 'relative'}}>
@@ -122,7 +163,7 @@ function Listings() {
                                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             />
-                            {myListings.map((listing) => {
+                            {allListings.map((listing) => {
                                 function IconDisplay() {
                                     if (listing.listing_type === 'House') {
                                         return houseIcon;
